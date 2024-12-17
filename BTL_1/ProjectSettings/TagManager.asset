@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Climping
   - 
   - 
   - 
@@ -40,4 +40,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2124743149
+    locked: 0
+  - name: nen
+    uniqueID: 441450781
+    locked: 0
+  - name: Platform
+    uniqueID: 883941433
+    locked: 0
+  - name: Climping
+    uniqueID: 1662004441
+    locked: 0
+  - name: Gai
+    uniqueID: 4093942257
+    locked: 0
+  - name: Player
+    uniqueID: 1330662279
     locked: 0
