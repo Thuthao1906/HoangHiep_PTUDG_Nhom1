@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Background
   - Gai
-  - 
-  - 
+  - Exit
+  - Pickup
   - 
   - 
   - 
@@ -56,6 +56,15 @@ TagManager:
   - name: Gai
     uniqueID: 4093942257
     locked: 0
+  - name: Exit
+    uniqueID: 967240977
+    locked: 0
+  - name: Pickup
+    uniqueID: 3814310529
+    locked: 0
   - name: Player
     uniqueID: 1330662279
+    locked: 0
+  - name: Nay
+    uniqueID: 3916744855
     locked: 0

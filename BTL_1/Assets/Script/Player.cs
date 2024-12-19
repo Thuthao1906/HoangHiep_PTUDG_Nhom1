@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] float climp = 5f;
     [SerializeField]  float mauBanDau = 4f;
     [SerializeField] float reloadTime = 0.5f;
+    public GameObject hoiSinh;
          float mauHienTai;
          float elapseTime = 0f;
     bool setGronded = false;
@@ -115,9 +117,18 @@ public class Player : MonoBehaviour
         {
             isAlive = false;
              animator.SetTrigger("Death");
+             hoiSinh.SetActive(true);
              Vector2 death = new Vector2(rg.velocity.x, 6f);
              rg.velocity = death;
         }
         
     }
+    public void Heal(float amount)
+    {
+            mauHienTai = mauHienTai + amount;
+            if (mauHienTai > mauBanDau)
+                mauHienTai = mauBanDau;
+            thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
+    }
+
 }
