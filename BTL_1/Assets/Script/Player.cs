@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] float climp = 5f;
     [SerializeField]  float mauBanDau = 4f;
     [SerializeField] float reloadTime = 0.5f;
+    [SerializeField] private LayerMask groundPlayer;
     public GameObject hoiSinh;
          float mauHienTai;
          float elapseTime = 0f;
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
     BoxCollider2D boxcolliderl;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rg = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
     {
 
         if (!isAlive) { return; }
-        if (value.isPressed && Mathf.Abs(rg.velocity.y) < 0.0001) { 
+        if (value.isPressed && IsGround()) { 
             rg.velocity += new Vector2(rg.velocity.x, jump);
             setGronded = false;
             animator.SetBool("isJumpping", !setGronded);
@@ -99,6 +100,11 @@ public class Player : MonoBehaviour
     {
         setGronded = true;
         animator.SetBool("isJumpping", !setGronded);
+    }
+    private bool IsGround()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxcolliderl.bounds.center, boxcolliderl.bounds.size, 0, Vector2.down, 0.1f, groundPlayer);
+        return raycastHit.collider != null;
     }
     void Death()
     {
@@ -131,5 +137,8 @@ public class Player : MonoBehaviour
             thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
     }
     
-
+    public bool canAttack()
+    {
+        return IsGround();
+    }
 }

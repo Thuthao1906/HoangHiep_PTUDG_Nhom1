@@ -10,7 +10,6 @@ public class Attack : MonoBehaviour
     Animator animator;
     [SerializeField] bool isAlive = true;
     private float cooldownTime=Mathf.Infinity;
-    bool setGronded = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,19 +28,15 @@ public class Attack : MonoBehaviour
         
         if (!isAlive) { return; }
         
-        if (value.isPressed && cooldownTime > attackCooldown )
+        if (value.isPressed && cooldownTime > attackCooldown  )
         {
-            setGronded=false;
-            animator.SetBool("isAttack", !setGronded);
-        }
-       if(!value.isPressed && cooldownTime < attackCooldown)
-        {
-            setGronded = true;
-            animator.SetBool("isAttack", !setGronded);
+            attack();
+            cooldownTime = Time.deltaTime;
         }
     }
     void attack()
     {
-
+        animator.SetTrigger("isAttack");
+        cooldownTime = 0;
     }
 }
