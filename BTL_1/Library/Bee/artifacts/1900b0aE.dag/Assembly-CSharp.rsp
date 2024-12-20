@@ -386,7 +386,11 @@
 "Assets/Script/HoiSinh.cs"
 "Assets/Script/MovingPlatform.cs"
 "Assets/Script/Player.cs"
+<<<<<<< Updated upstream
 "Assets/Script/ScrollBackGround.cs"
+=======
+"Assets/Script/RemoveElements.cs"
+>>>>>>> Stashed changes
 "Assets/Script/ThanhMau.cs"
 -langversion:9.0
 /deterministic

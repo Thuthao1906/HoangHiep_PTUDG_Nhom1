@@ -18,7 +18,7 @@ TagManager:
   - Gai
   - Exit
   - Pickup
-  - 
+  - Elementupdown
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Climping
     uniqueID: 1662004441
+    locked: 0
+  - name: Elementupdown
+    uniqueID: 3361842959
     locked: 0
   - name: Gai
     uniqueID: 4093942257
