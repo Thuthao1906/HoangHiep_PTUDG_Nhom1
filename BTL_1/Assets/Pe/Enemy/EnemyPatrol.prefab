@@ -51,7 +51,7 @@ MonoBehaviour:
   rightEdge: {fileID: 2298706404163047790}
   enemy: {fileID: 7138962357902090805}
   speed: 1
-  idleDuration: 3
+  idleDuration: 1
   anima: {fileID: 7620149771655589372}
 --- !u!1 &5099015040347368230
 GameObject:
@@ -125,16 +125,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6655140529025351385, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: range
-      value: 2.25
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6655140529025351385, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: attackCooldown
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -6655140529025351385, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: colliderDistance
-      value: 0.44
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: -6655140529025351385, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: playerLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 1652788016530708150, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 916504886, guid: 4b3fd219281022741bde74e65625729f, type: 3}
     - target: {fileID: 1652788016530708150, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: m_SortingLayer
       value: 9
@@ -187,11 +195,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ngua
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7928133
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2621648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0055890083
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.099832416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239999525126390069, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.40625
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6858627529068433890, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 606885964136252540}
   m_SourcePrefab: {fileID: 100100000, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+--- !u!1 &1083971441835519684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+  m_PrefabInstance: {fileID: 9092120843259062641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &606885964136252540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083971441835519684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5cf11f5e25ce5498106a8a397825f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components: []
+  ngua: {fileID: 1083971441835519684}
 --- !u!4 &7138962357902090805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2107407328876825412, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
