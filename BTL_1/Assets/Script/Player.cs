@@ -8,18 +8,18 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public ThanhMau thanhmau;
+    //public ThanhMau thanhmau;
     public Rigidbody2D rg;
     Vector2 moveInput;
     [SerializeField] float speed = 5f;
     [SerializeField] float jump = 10f;
     [SerializeField] float climp = 5f;
-    [SerializeField]  float mauBanDau = 4f;
-    [SerializeField] float reloadTime = 0.5f;
+    //[SerializeField]  float mauBanDau = 4f;
+    //[SerializeField] float reloadTime = 0.5f;
     [SerializeField] private LayerMask groundPlayer;
     public GameObject hoiSinh;
-         float mauHienTai;
-         float elapseTime = 0f;
+         //float mauHienTai;
+         //float elapseTime = 0f;
     bool setGronded = false;
     float mygravityScale;
     [SerializeField] bool isAlive = true;
@@ -35,8 +35,8 @@ public class Player : MonoBehaviour
         playercollider = GetComponent<CapsuleCollider2D>();
         mygravityScale = rg.gravityScale;
         boxcolliderl = GetComponent<BoxCollider2D>();
-        mauHienTai = mauBanDau;
-        thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
+        //mauHienTai = mauBanDau;
+        //thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         Run();
         FlipPlayer();
         Climp();
-        Death();
+        //Death();
     }
     private void OnMove(InputValue value)
     {
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
     {
 
         if (!isAlive) { return; }
-        if (value.isPressed && IsGround()) { 
+        if (value.isPressed && Mathf.Abs(rg.velocity.y)<0.001) { 
             rg.velocity += new Vector2(rg.velocity.x, jump);
             setGronded = false;
             animator.SetBool("isJumpping", !setGronded);
@@ -106,36 +106,36 @@ public class Player : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxcolliderl.bounds.center, boxcolliderl.bounds.size, 0, Vector2.down, 0.1f, groundPlayer);
         return raycastHit.collider != null;
     }
-    void Death()
+    public void Death()
     {
-        elapseTime += Time.deltaTime;
-        if (boxcolliderl.IsTouchingLayers(LayerMask.GetMask("Gai")))
-        {
-            if (elapseTime > reloadTime)
-            {
-                mauHienTai -= 1;
-                thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
-                elapseTime = 0;
-            }
+       // elapseTime += Time.deltaTime;
+      //  if (boxcolliderl.IsTouchingLayers(LayerMask.GetMask("Gai")))
+       // {
+       //     if (elapseTime > reloadTime)
+       //     {
+       //         mauHienTai -= 1;
+        //        thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
+        //        elapseTime = 0;
+        //    }
             
-        }
-        if (mauHienTai < 0)
-        {
+       // }
+        //if (mauHienTai < 0)
+        //{
             isAlive = false;
              animator.SetTrigger("Death");
              hoiSinh.SetActive(true);
              Vector2 death = new Vector2(rg.velocity.x, 6f);
              rg.velocity = death;
-        }
+        //}
         
     }
-    public void Heal(float amount)
-    {
-            mauHienTai = mauHienTai + amount;
-            if (mauHienTai > mauBanDau)
-                mauHienTai = mauBanDau;
-            thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
-    }
+    //public void Heal(float amount)
+    //{
+    //        mauHienTai = mauHienTai + amount;
+    //        if (mauHienTai > mauBanDau)
+    //            mauHienTai = mauBanDau;
+    //        thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
+    //}
     
     public bool canAttack()
     {

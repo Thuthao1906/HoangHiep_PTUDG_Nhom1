@@ -8,14 +8,14 @@ public class Heath : MonoBehaviour
 { 
     public GameObject health;
     float amount = 1f;
-    Player player;
+    Health hoimau;
     private void OnTriggerEnter2D(Collider2D other)
     {
-       player = other.GetComponent<Player>();
+       hoimau = other.GetComponent<Health>();
         
         if (other.tag=="Player")
         {
-            player.Heal(amount);
+            hoimau.AddHealth(amount);
         }
     }
    

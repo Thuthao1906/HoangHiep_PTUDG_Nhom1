@@ -10,12 +10,15 @@ public class Attack : MonoBehaviour
     Animator animator;
     [SerializeField] bool isAlive = true;
     private float cooldownTime=Mathf.Infinity;
+    private Health playerHealth;
+    [SerializeField] private int damage;
     // Start is called before the first frame update
     void Start()
     {
 
         player = GetComponent<Player>();
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,11 @@ public class Attack : MonoBehaviour
     void attack()
     {
         animator.SetTrigger("isAttack");
+        DamegePlayer();
         cooldownTime = 0;
+    }
+    private void DamegePlayer()
+    {
+            playerHealth.TakeDamage(damage);
     }
 }

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3980301293556319663}
   - component: {fileID: 4651663634395874405}
   - component: {fileID: 5096072055246234524}
+  - component: {fileID: 2706040898455825187}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -163,7 +164,67 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2713345a-3156-43b0-9522-2ad7a990c74c
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2c4c6b5c-18b8-4cd3-b53c-ba13eb30cf48
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0faaef8b-648c-486e-8c54-0613b4370f44
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a5bfccae-8e51-4c4e-be06-4f183aebf96f
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 10d60e13-3c78-474e-862c-726eb4c29146
+    m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 605cd08f-e8ca-4bb5-bdd1-e85939359cb2
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f7179aa6-c386-44ea-aeb4-603fd0f8cf68
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53cdbeea-8703-4413-b994-b5c2464b753c
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1d2a330c-2253-410d-a8a9-1b268259c41f
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e4b420e0-af40-4bdc-bf8d-5928afafe078
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 131d1b1d-28e0-4d99-bb69-4f65e6688fc1
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 694aaa9c-7ff3-4c46-af3e-041621884085
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5165179-45e5-42a5-8a92-23d57b47d8c6
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 962cc662-6c60-4d7d-b501-19ea3f437450
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bd2d98de-b754-4ed0-af85-a407085b7bbc
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -181,13 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e5c70a30803794ea0c25e712043ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thanhmau: {fileID: 0}
   rg: {fileID: 0}
   speed: 5
   jump: 10
   climp: 5
-  mauBanDau: 4
-  reloadTime: 0.5
   groundPlayer:
     serializedVersion: 2
     m_Bits: 128
@@ -287,3 +345,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0
   isAlive: 1
+--- !u!114 &2706040898455825187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6228516531963528093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2f9bee102861f4aace8a29590f93fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 4
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  components: []

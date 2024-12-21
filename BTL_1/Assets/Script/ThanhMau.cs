@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class ThanhMau : MonoBehaviour
 {
     public Image thanhMau;
-    float mauHienTai;
-    float mauBandau;
-    public void CapNhatThanhMau(float mauHienTai,float mauBandau)
+    [SerializeField] private Health playerHealth;
+
+
+    private void Start()
     {
-        thanhMau.fillAmount= mauHienTai/mauBandau;
+        thanhMau.fillAmount = playerHealth.currentHealth/playerHealth.startingHealth;
+    }
+    private void Update()
+    {
+        thanhMau.fillAmount = playerHealth.currentHealth / playerHealth.startingHealth;
     }
 }
