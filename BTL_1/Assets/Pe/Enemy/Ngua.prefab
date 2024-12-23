@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 1724181996670780557}
   - component: {fileID: 8239999525126390069}
   - component: {fileID: -6655140529025351385}
-  - component: {fileID: 6858627529068433890}
-  m_Layer: 0
+  - component: {fileID: 2144301737901871608}
+  m_Layer: 13
   m_Name: Ngua
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1330662279
+  m_SortingLayer: 9
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1401447550, guid: f54ff8aa7d66de34eb8f29f36649d753, type: 3}
+  m_Sprite: {fileID: 916504886, guid: 4b3fd219281022741bde74e65625729f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,18 +169,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0055890083, y: -0.099832416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65625, y: 1.0625}
+    oldSize: {x: 1.78125, y: 1.40625}
     newSize: {x: 0.65625, y: 1.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65625, y: 1.0625}
+  m_Size: {x: 1.7928133, y: 1.2621648}
   m_EdgeRadius: 0
 --- !u!114 &-6655140529025351385
 MonoBehaviour:
@@ -194,15 +194,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcd599ae6173594ea9de74067feef88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
-  range: 4
-  colliderDistance: 0.41
+  attackCooldown: 0
+  range: 1.34
+  colliderDistance: 0.32
   damage: 1
   boxCollider: {fileID: 8239999525126390069}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &6858627529068433890
+--- !u!114 &2144301737901871608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,10 +211,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8153408635643856821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d2f9bee102861f4aace8a29590f93fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 13f9770d881d2f940bc0dde280a90b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 0
   iFramesDuration: 0
   numberOfFlashes: 0
   components: []
+  ngua: {fileID: 0}

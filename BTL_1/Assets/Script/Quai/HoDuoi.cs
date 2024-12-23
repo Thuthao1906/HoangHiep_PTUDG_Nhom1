@@ -58,7 +58,7 @@ public class HoDuoi : MonoBehaviour
     {
         // Chỉ di chuyển theo trục X
         float direction = player.position.x > transform.position.x ? 1 : -1;
-        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
     }
 
     private void Patrol()
@@ -66,7 +66,7 @@ public class HoDuoi : MonoBehaviour
         // Tuần tra theo trục X quanh vị trí ban đầu
         if (movingRight)
         {
-            rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
+            rb.velocity = new Vector2(speed, rb.velocity.y);
             if (transform.position.x > startingPosition.x + patrolDistance)
             {
                 movingRight = false;
@@ -74,7 +74,7 @@ public class HoDuoi : MonoBehaviour
         }
         else
         {
-            rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
             if (transform.position.x < startingPosition.x - patrolDistance)
             {
                 movingRight = true;
@@ -85,7 +85,7 @@ public class HoDuoi : MonoBehaviour
     {
         // Quay mặt kẻ thù về hướng di chuyển
         Vector3 scale = transform.localScale;
-        scale.x = rb.linearVelocity.x > 0 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+        scale.x = rb.velocity.x > 0 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
         transform.localScale = scale;
     }
 

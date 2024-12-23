@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 4651663634395874405}
   - component: {fileID: 5096072055246234524}
   - component: {fileID: 2706040898455825187}
-  - component: {fileID: 2712199306552537367}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -366,68 +365,6 @@ MonoBehaviour:
   iFramesDuration: 0
   numberOfFlashes: 0
   components: []
---- !u!60 &2712199306552537367
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6228516531963528093}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65625, y: 1.0625}
-    newSize: {x: 0.65625, y: 1.03125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.08746338, y: 0.17647839}
-      - {x: 0.24736595, y: 0.027072906}
-      - {x: 0.31474876, y: -0.09666693}
-      - {x: 0.30072975, y: -0.22242153}
-      - {x: 0.23950958, y: -0.2601068}
-      - {x: 0.19388962, y: -0.2913568}
-      - {x: 0.2875805, y: -0.32514477}
-      - {x: 0.39399529, y: -0.28835142}
-      - {x: 0.43175697, y: -0.2215035}
-      - {x: 0.4379673, y: -0.12612998}
-      - {x: 0.4280491, y: -0.063447356}
-      - {x: 0.38108444, y: 0.017695427}
-      - {x: 0.326025, y: 0.07161009}
-      - {x: 0.2723713, y: 0.10975301}
-      - {x: 0.2052803, y: 0.17206216}
-      - {x: 0.17071724, y: 0.1893369}
-      - {x: 0.13553429, y: 0.19675112}
-  m_UseDelaunayMesh: 0
 --- !u!1 &7957389884404214131
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6742225464497806211}
   - component: {fileID: 1337895090716664815}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: chem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

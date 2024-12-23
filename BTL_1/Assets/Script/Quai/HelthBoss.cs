@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class HelthBoss : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
-
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
@@ -41,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("die");
+                FindObjectOfType<GameController>().OnBossDefeated();
                 foreach (Behaviour component in components)
                     component.enabled = false;
 

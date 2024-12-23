@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class Canine : MonoBehaviour
 {
-    [Header ("Patrol Points")]
+    [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
 
@@ -21,7 +21,7 @@ public class EnemyPatrol : MonoBehaviour
     private float idleTimer;
 
     [Header("Enemy Animator")]
-    [SerializeField]  private Animator anima;
+    [SerializeField] private Animator anima;
 
     private void Awake()
     {
@@ -33,9 +33,10 @@ public class EnemyPatrol : MonoBehaviour
     }
     private void Update()
     {
+
         if (movingLeft)
         {
-            if(enemy.position.x>=leftEdge.position.x)
+            if (enemy.position.x >= leftEdge.position.x)
                 MoveInDrection(-1);
             else
             {
@@ -60,17 +61,16 @@ public class EnemyPatrol : MonoBehaviour
 
         if (idleTimer > idleDuration)
         {
-            movingLeft =!movingLeft;
+            movingLeft = !movingLeft;
         }
-        
+
     }
 
     private void MoveInDrection(int derection)
     {
         idleTimer = 0;
         anima.SetBool("run", true);
-        enemy.localScale= new Vector3 (initScale.x*derection, initScale.y,initScale.z);
-
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * derection*speed,enemy.position.y,enemy.position.z);
+        enemy.localScale = new Vector3(-initScale.x * derection, initScale.y, initScale.z);
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * derection * speed, enemy.position.y, enemy.position.z);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,7 +32,7 @@ public class Attack : MonoBehaviour
         
         if (!isAlive) { return; }
         
-        if (value.isPressed && cooldownTime > attackCooldown && Mathf.Abs(rg.linearVelocity.y) < 0.001)
+        if (value.isPressed && cooldownTime > attackCooldown && Mathf.Abs(rg.velocity.y) < 0.001)
         {
             AudioManager.Instance.playSound(kiemchem);
             attack();
@@ -51,6 +52,10 @@ public class Attack : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<EnemyHealth>().TakeDamage(damage);
+        }
+        if (collision.tag == "Boss")
+        {
+            collision.GetComponent<HelthBoss>().TakeDamage(damage);
         }
     }
 }
