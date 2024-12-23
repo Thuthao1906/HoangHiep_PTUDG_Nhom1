@@ -8,18 +8,16 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //public ThanhMau thanhmau;
+  
     public Rigidbody2D rg;
     Vector2 moveInput;
     [SerializeField] float speed = 5f;
     [SerializeField] float jump = 10f;
     [SerializeField] float climp = 5f;
-    //[SerializeField]  float mauBanDau = 4f;
-    //[SerializeField] float reloadTime = 0.5f;
     [SerializeField] private LayerMask groundPlayer;
+    [SerializeField] private AudioClip chay;
     public GameObject hoiSinh;
-         //float mauHienTai;
-         //float elapseTime = 0f;
+         
     bool setGronded = false;
     float mygravityScale;
     [SerializeField] bool isAlive = true;
@@ -57,8 +55,11 @@ public class Player : MonoBehaviour
         if (!isAlive) { return; }
         Vector2 playerVelocity = new Vector2(moveInput.x * speed, rg.velocity.y);
         rg.velocity = playerVelocity;
+        
+        
         bool playerHorizontalSpeed = Mathf.Abs(rg.velocity.x) > Mathf.Epsilon;
         animator.SetBool("isRunning", playerHorizontalSpeed);
+        
     }
     void FlipPlayer()
     {

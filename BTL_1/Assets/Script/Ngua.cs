@@ -10,6 +10,7 @@ public class Ngua : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField]  private BoxCollider2D boxCollider;
     [SerializeField]  private LayerMask playerLayer;
+    
 
     private float cooldownTimer=Mathf.Infinity;
     private Animator anima;

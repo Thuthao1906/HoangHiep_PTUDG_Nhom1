@@ -11,13 +11,14 @@ public class Attack : MonoBehaviour
     Animator animator;
     [SerializeField] bool isAlive = true;
     private float cooldownTime=Mathf.Infinity;
-    private PolygonCollider2D pCollider;
+    [SerializeField] private AudioClip kiemchem;
+    Rigidbody2D rg;
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Player>();
         animator = GetComponent<Animator>();
-        pCollider = GetComponent<PolygonCollider2D>();
+        rg= GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -30,8 +31,9 @@ public class Attack : MonoBehaviour
         
         if (!isAlive) { return; }
         
-        if (value.isPressed && cooldownTime > attackCooldown  )
+        if (value.isPressed && cooldownTime > attackCooldown && Mathf.Abs(rg.velocity.y) < 0.001)
         {
+            AudioManager.Instance.playSound(kiemchem);
             attack();
             cooldownTime = Time.deltaTime;
         }
