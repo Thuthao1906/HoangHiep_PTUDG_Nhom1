@@ -31,7 +31,7 @@ public class Attack : MonoBehaviour
         
         if (!isAlive) { return; }
         
-        if (value.isPressed && cooldownTime > attackCooldown && Mathf.Abs(rg.velocity.y) < 0.001)
+        if (value.isPressed && cooldownTime > attackCooldown && Mathf.Abs(rg.linearVelocity.y) < 0.001)
         {
             AudioManager.Instance.playSound(kiemchem);
             attack();

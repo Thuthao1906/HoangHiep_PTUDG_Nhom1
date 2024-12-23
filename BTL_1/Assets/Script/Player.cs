@@ -53,21 +53,21 @@ public class Player : MonoBehaviour
     void Run()
     {
         if (!isAlive) { return; }
-        Vector2 playerVelocity = new Vector2(moveInput.x * speed, rg.velocity.y);
-        rg.velocity = playerVelocity;
+        Vector2 playerVelocity = new Vector2(moveInput.x * speed, rg.linearVelocity.y);
+        rg.linearVelocity = playerVelocity;
         
         
-        bool playerHorizontalSpeed = Mathf.Abs(rg.velocity.x) > Mathf.Epsilon;
+        bool playerHorizontalSpeed = Mathf.Abs(rg.linearVelocity.x) > Mathf.Epsilon;
         animator.SetBool("isRunning", playerHorizontalSpeed);
         
     }
     void FlipPlayer()
     {
         if (!isAlive) { return; }
-        bool playerHorizontalSpeed = Mathf.Abs(rg.velocity.x) > Mathf.Epsilon;
+        bool playerHorizontalSpeed = Mathf.Abs(rg.linearVelocity.x) > Mathf.Epsilon;
         if (playerHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(rg.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(rg.linearVelocity.x), 1f);
         }
     }
 
@@ -81,18 +81,18 @@ public class Player : MonoBehaviour
             return;
 
         }
-        Vector2 climpVelocity = new Vector2(rg.velocity.x, moveInput.y * climp);
-        rg.velocity = climpVelocity;
+        Vector2 climpVelocity = new Vector2(rg.linearVelocity.x, moveInput.y * climp);
+        rg.linearVelocity = climpVelocity;
         rg.gravityScale = 0;
-        bool climpHorizontalSpeed = Mathf.Abs(rg.velocity.y) > Mathf.Epsilon;
+        bool climpHorizontalSpeed = Mathf.Abs(rg.linearVelocity.y) > Mathf.Epsilon;
         animator.SetBool("isClimping", climpHorizontalSpeed);
     }
     void OnJump(InputValue value)
     {
 
         if (!isAlive) { return; }
-        if (value.isPressed && Mathf.Abs(rg.velocity.y)<0.001) { 
-            rg.velocity += new Vector2(rg.velocity.x, jump);
+        if (value.isPressed && Mathf.Abs(rg.linearVelocity.y)<0.001) { 
+            rg.linearVelocity += new Vector2(rg.linearVelocity.x, jump);
             setGronded = false;
             animator.SetBool("isJumpping", !setGronded);
         }
@@ -125,8 +125,8 @@ public class Player : MonoBehaviour
             isAlive = false;
              animator.SetTrigger("Death");
              hoiSinh.SetActive(true);
-             Vector2 death = new Vector2(rg.velocity.x, 6f);
-             rg.velocity = death;
+             Vector2 death = new Vector2(rg.linearVelocity.x, 6f);
+             rg.linearVelocity = death;
         //}
         
     }
