@@ -1,7 +1,40 @@
 fileFormatVersion: 2
-guid: d01deea08fa90784aafa6cc96391d73a
+guid: 7f80c239c89f327489c23e88eee25237
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2890353389259451413
+    second: trongdong_0
+  - first:
+      213: 2947861877173760415
+    second: trongdong_1
+  - first:
+      213: 7635398724534507434
+    second: trongdong_2
+  - first:
+      213: -670057994635505931
+    second: trongdong_3
+  - first:
+      213: 1724540798609157422
+    second: trongdong_4
+  - first:
+      213: -3609265148821646149
+    second: trongdong_5
+  - first:
+      213: 7202050333308932586
+    second: trongdong_6
+  - first:
+      213: 5349401766004645871
+    second: trongdong_7
+  - first:
+      213: 3177430668751794702
+    second: trongdong_8
+  - first:
+      213: -2165432435355909871
+    second: trongdong_9
+  - first:
+      213: -2637453659868062277
+    second: trongdong_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,9 +70,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 90
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +146,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 752fe0b2781e01649935a50f8c03bdf5
     internalID: 0
     vertices: []
     indices: 
@@ -122,7 +155,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      trongdong_6: 7202050333308932586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
