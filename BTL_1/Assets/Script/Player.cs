@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     CapsuleCollider2D playercollider;
     BoxCollider2D boxcolliderl;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rg = GetComponent<Rigidbody2D>();
@@ -32,18 +31,15 @@ public class Player : MonoBehaviour
         playercollider = GetComponent<CapsuleCollider2D>();
         mygravityScale = rg.gravityScale;
         boxcolliderl = GetComponent<BoxCollider2D>();
-        //mauHienTai = mauBanDau;
-        //thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!isAlive) { return; }
         Run();
         FlipPlayer();
         Climp();
-        //Death();
     }
     private void OnMove(InputValue value)
     {
@@ -108,34 +104,16 @@ public class Player : MonoBehaviour
     }
     public void Death()
     {
-       // elapseTime += Time.deltaTime;
-      //  if (boxcolliderl.IsTouchingLayers(LayerMask.GetMask("Gai")))
-       // {
-       //     if (elapseTime > reloadTime)
-       //     {
-       //         mauHienTai -= 1;
-        //        thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
-        //        elapseTime = 0;
-        //    }
-            
-       // }
-        //if (mauHienTai < 0)
-        //{
+      
             isAlive = false;
              animator.SetTrigger("Death");
              hoiSinh.SetActive(true);
              Vector2 death = new Vector2(rg.velocity.x, 6f);
              rg.velocity = death;
-        //}
+     
         
     }
-    //public void Heal(float amount)
-    //{
-    //        mauHienTai = mauHienTai + amount;
-    //        if (mauHienTai > mauBanDau)
-    //            mauHienTai = mauBanDau;
-    //        thanhmau.CapNhatThanhMau(mauHienTai, mauBanDau);
-    //}
+   
     
     public bool canAttack()
     {

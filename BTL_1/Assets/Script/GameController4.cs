@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameController : MonoBehaviour
     private int enemiesDefeated = 0;     // Số quái đã bị tiêu diệt
     private bool bossSpawned = false;    // Cờ kiểm tra boss đã xuất hiện chưa
     private float timer = 0f; // Bộ đếm thời gian
+    [SerializeField] GameObject text;
 
     void Start()
     {
@@ -68,8 +70,8 @@ public class GameController : MonoBehaviour
     }
     public void OnBossDefeated()
     {
-        Debug.Log("Boss đã bị tiêu diệt! Qua màn mới!");
+        Debug.Log("Boss đã bị tiêu diệt!");
         // Chuyển qua màn mới (ví dụ: Scene tiếp theo)
-        SceneManager.LoadScene(0);
+      text.SetActive(true);
     }
 }

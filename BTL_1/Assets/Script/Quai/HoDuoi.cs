@@ -9,6 +9,7 @@ public class HoDuoi : MonoBehaviour
     public float chaseRangeY = 2f;
     public float chaseRangeX = 5f; // Khoảng cách phát hiện nhân vật
     public float patrolDistance = 3f; // Khoảng cách tuần tra
+    [SerializeField] float damage; //damage cua ho
 
     private Vector2 startingPosition; // Vị trí ban đầu
     private Rigidbody2D rb;
@@ -94,4 +95,11 @@ public class HoDuoi : MonoBehaviour
         UpdateFacingDirection();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            FindObjectOfType<Health>().TakeDamage(damage);
+        }
+    }
 }

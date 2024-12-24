@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8153408635643856821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.79039, y: 4.3517466, z: -0.3969093}
+  m_LocalPosition: {x: 45.75, y: 4.65, z: -0.3969093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,18 +169,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0055890083, y: -0.099832416}
+  m_Offset: {x: 0.0517025, y: -0.051516056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.78125, y: 1.40625}
+    oldSize: {x: 4.3846154, y: 3.4615386}
     newSize: {x: 0.65625, y: 1.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7928133, y: 1.2621648}
+  m_Size: {x: 5.8322716, y: 3.9241114}
   m_EdgeRadius: 0
 --- !u!114 &2144301737901871608
 MonoBehaviour:
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0
   range: -1.52
-  colliderDistance: -0.29
+  colliderDistance: -0.07
   damage: 2
   boxCollider: {fileID: 8239999525126390069}
   playerLayer:

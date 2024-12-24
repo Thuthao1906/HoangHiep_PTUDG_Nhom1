@@ -5,19 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameController3 : MonoBehaviour
 {
-    public GameObject enemyPrefab;       // Prefab c?a quái
-    public GameObject bossPrefab;        // Prefab c?a boss
-    public Transform[] spawnPoints;      // Các v? trí spawn quái
-    public Transform bossSpawnPoint;     // V? trí spawn boss
-    public float spawnInterval = 5f; // Th?i gian spawn quái (giây)
-    public int totalEnemiesToDefeat = 10; // S? l??ng quái c?n tiêu di?t ?? xu?t hi?n boss
-    private int enemiesDefeated = 0;     // S? quái ?ã b? tiêu di?t
-    private bool bossSpawned = false;    // C? ki?m tra boss ?ã xu?t hi?n ch?a
+    public GameObject enemyPrefab;       // prefab cua quai
+    public GameObject bossPrefab;        // prefab cua boss
+    public Transform[] spawnPoints;      // cac vi tri spawn quai
+    public Transform bossSpawnPoint;     // vi tri spawn boss
+    public float spawnInterval = 5f; // Thoi gian spawn quai
+    public int totalEnemiesToDefeat = 10; // so luong quai can tieu diet de ruong xuat hien
+    private int enemiesDefeated = 0;     // so quai da tieu diet
+    private bool bossSpawned = false;    // Kiem tra boss duoc spawn ra chua
     private float timer = 0f; // B? ??m th?i gian
+    public bool requiredItem=false; //Tinh trang vat pham da mo chua
 
     void Start()
     {
-        // Spawn quái ??u tiên
+        // spawn turn quai dau
         SpawnEnemy();
         SpawnEnemy();
         SpawnEnemy();
@@ -27,7 +28,7 @@ public class GameController3 : MonoBehaviour
     {
         if (!bossSpawned)
         {
-            // T?ng th?i gian và spawn quái n?u c?n
+            // Tang thoi gian va spawn quai
             timer += Time.deltaTime;
             if (timer >= spawnInterval)
             {
@@ -42,13 +43,13 @@ public class GameController3 : MonoBehaviour
     {
         if (enemiesDefeated < totalEnemiesToDefeat)
         {
-            // Ch?n v? trí spawn ng?u nhiên
+            // Chon vi tri spawn ngau nhien
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(enemyPrefab, randomSpawnPoint.position, Quaternion.identity);
         }
     }
 
-    // Hàm g?i khi quái b? tiêu di?t
+    // Ham khi quai bi tieu diet
     public void OnEnemyDefeated()
     {
         enemiesDefeated++;
@@ -72,5 +73,14 @@ public class GameController3 : MonoBehaviour
             return true;
         }
         return false;
+    }
+    public void OnItemCollected()
+    {
+        //Kiem tra xem nhat duoc vat pham chua
+        requiredItem= true;
+    }
+    public bool ischeckVatPham()
+    {
+        return requiredItem;
     }
 }

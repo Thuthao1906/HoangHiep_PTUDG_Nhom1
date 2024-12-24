@@ -166,3 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7473067780344190835, guid: 8c690fb3ed020794d933b05a14d68cba, type: 3}
+  chestCollider: {fileID: 515712296012508097}

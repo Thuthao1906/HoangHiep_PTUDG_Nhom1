@@ -61,5 +61,9 @@ public class Attack : MonoBehaviour
         {
             collision.GetComponent<CrabHealth>().TakeDamage(damage);
         }
+        if (collision.tag == "Ho")
+        {
+            collision.GetComponent<HealthHo>().TakeDamage(damage);
+        }
     }
 }
