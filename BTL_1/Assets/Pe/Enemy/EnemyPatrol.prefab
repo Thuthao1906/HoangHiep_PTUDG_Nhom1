@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2417697227327669840}
   - component: {fileID: 8710463409395034718}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EnemyPatrol
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2298706404163047790}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightEdge
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 538184373635435773}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftEdge
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -163,6 +163,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2144301737901871608, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: ngua
+      value: 
+      objectReference: {fileID: 1083971441835519684}
+    - target: {fileID: 2313227218311427712, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: range
+      value: 1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313227218311427712, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+      propertyPath: colliderDistance
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: m_Name
       value: Ngua
@@ -172,6 +184,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+--- !u!1 &1083971441835519684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
+  m_PrefabInstance: {fileID: 9092120843259062641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7138962357902090805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2107407328876825412, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}

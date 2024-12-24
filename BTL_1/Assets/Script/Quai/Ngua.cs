@@ -8,15 +8,15 @@ public class Ngua : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private int damage;
-    [SerializeField]  private BoxCollider2D boxCollider;
-    [SerializeField]  private LayerMask playerLayer;
-    
+    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private LayerMask playerLayer;
 
-    private float cooldownTimer=Mathf.Infinity;
+
+    private float cooldownTimer = Mathf.Infinity;
     private Animator anima;
 
     private Health playerHealth;
-    private EnemyPatrol enemyPatrol; 
+    private EnemyPatrol enemyPatrol;
 
     public void Awake()
     {
@@ -28,27 +28,27 @@ public class Ngua : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         if (PlayerInsight())
         {
-            if(cooldownTimer > attackCooldown)
+            if (cooldownTimer > attackCooldown)
             {
                 cooldownTimer = 0;
                 anima.SetTrigger("attack");
             }
         }
-        if(enemyPatrol != null)
+        if (enemyPatrol != null)
         {
             enemyPatrol.enabled = !PlayerInsight();
         }
-        
+
     }
     private bool PlayerInsight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right*range*transform.localScale.x* colliderDistance
-            ,new Vector2(boxCollider.bounds.size.x*range,boxCollider.size.y),0,Vector2.left, 0,playerLayer);
-        if(hit.collider !=null)
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance
+            , new Vector2(boxCollider.bounds.size.x * range, boxCollider.size.y), 0, Vector2.left, 0, playerLayer);
+        if (hit.collider != null)
         {
             playerHealth = hit.transform.GetComponent<Health>();
         }
-        return hit.collider!=null; 
+        return hit.collider != null;
     }
     private void OnDrawGizmos()
     {

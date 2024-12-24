@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Boss
+  - Crab
   layers:
   - Default
   - TransparentFX
