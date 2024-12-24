@@ -285,8 +285,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009708285, y: 0}
-  m_Size: {x: 0.5850556, y: 1.0625}
+  m_Offset: {x: 0.007266164, y: -0.004884422}
+  m_Size: {x: 0.52155995, y: 1.091806}
   m_Direction: 0
 --- !u!61 &4651663634395874405
 BoxCollider2D:
@@ -320,7 +320,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008919716, y: -0.5093557}
+  m_Offset: {x: -0.008175373, y: -0.5215665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -331,7 +331,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21308708, y: 0.043788552}
+  m_Size: {x: 0.31565714, y: 0.04867339}
   m_EdgeRadius: 0
 --- !u!114 &5096072055246234524
 MonoBehaviour:
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e656732d14cf1874baf9c13738ef01b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
   attackCooldown: 0
   isAlive: 1
   kiemchem: {fileID: 8300000, guid: 864a9e085ae1a7a45ace22bcfbb09fb1, type: 3}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2f9bee102861f4aace8a29590f93fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 150
   iFramesDuration: 0
   numberOfFlashes: 0
   components: []

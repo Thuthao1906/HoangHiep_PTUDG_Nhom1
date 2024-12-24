@@ -112,7 +112,7 @@ MonoBehaviour:
   leftEdge: {fileID: 6314219909180686586}
   rightEdge: {fileID: 7714758527376220713}
   enemy: {fileID: 1290834470507008729}
-  speed: 1
+  speed: 2
   idleDuration: 0
   anima: {fileID: 6519944913423877113}
 --- !u!1001 &4261042958481622151
@@ -178,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 4650473475431156757, guid: 701d7c9e3a12386488f5771311d6c7d0, type: 3}
       propertyPath: m_Offset.y
       value: -0.2632277
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955848210888177752, guid: 701d7c9e3a12386488f5771311d6c7d0, type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500408008252605867, guid: 701d7c9e3a12386488f5771311d6c7d0, type: 3}
+      propertyPath: startingHealth
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6812101231508013079, guid: 701d7c9e3a12386488f5771311d6c7d0, type: 3}
       propertyPath: m_Name

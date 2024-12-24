@@ -50,7 +50,7 @@ MonoBehaviour:
   leftEdge: {fileID: 538184373635435773}
   rightEdge: {fileID: 2298706404163047790}
   enemy: {fileID: 7138962357902090805}
-  speed: 1
+  speed: 2
   idleDuration: 1
   anima: {fileID: 7620149771655589372}
 --- !u!1 &5099015040347368230
@@ -163,18 +163,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2144301737901871608, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
-      propertyPath: ngua
-      value: 
-      objectReference: {fileID: 1083971441835519684}
-    - target: {fileID: 2313227218311427712, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
-      propertyPath: range
-      value: 1.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313227218311427712, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
-      propertyPath: colliderDistance
-      value: 0.34
-      objectReference: {fileID: 0}
     - target: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
       propertyPath: m_Name
       value: Ngua
@@ -184,11 +172,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
---- !u!1 &1083971441835519684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8153408635643856821, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}
-  m_PrefabInstance: {fileID: 9092120843259062641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7138962357902090805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2107407328876825412, guid: fa5d19db8dbafc14997a5ac90ac50315, type: 3}

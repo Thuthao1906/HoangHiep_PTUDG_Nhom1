@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf11f5e25ce5498106a8a397825f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 140
   iFramesDuration: 0
   numberOfFlashes: 0
   components: []
@@ -214,7 +214,7 @@ MonoBehaviour:
   attackCooldown: 0
   range: 1.47
   colliderDistance: -0.35
-  damage: 1
+  damage: 30
   boxCollider: {fileID: 7370616331818174604}
   playerLayer:
     serializedVersion: 2

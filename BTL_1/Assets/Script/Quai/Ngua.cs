@@ -53,7 +53,8 @@ public class Ngua : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, new Vector2(boxCollider.bounds.size.x * range, boxCollider.size.y));
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, 
+            new Vector2(boxCollider.bounds.size.x * range, boxCollider.size.y));
     }
 
     private void DamegePlayer()

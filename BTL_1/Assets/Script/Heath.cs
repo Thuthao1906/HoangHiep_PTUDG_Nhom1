@@ -7,7 +7,7 @@ using UnityEngine;
 public class Heath : MonoBehaviour
 { 
     public GameObject health;
-    float amount = 1f;
+    [SerializeField] float amount = 20f;
     Health hoimau;
     private void OnTriggerEnter2D(Collider2D other)
     {

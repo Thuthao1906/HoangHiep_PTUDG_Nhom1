@@ -71,7 +71,6 @@ public class GameController : MonoBehaviour
     public void OnBossDefeated()
     {
         Debug.Log("Boss đã bị tiêu diệt!");
-        // Chuyển qua màn mới (ví dụ: Scene tiếp theo)
       text.SetActive(true);
     }
 }
