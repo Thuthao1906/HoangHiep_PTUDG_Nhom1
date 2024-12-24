@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
         source = GetComponent<AudioSource>();
+       
     }
     public void playSound(AudioClip sound)
     {

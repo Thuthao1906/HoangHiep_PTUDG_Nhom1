@@ -11,6 +11,7 @@ public class Ngua : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
 
+    [SerializeField] AudioClip attack;
 
     private float cooldownTimer = Mathf.Infinity;
     private Animator anima;
@@ -30,6 +31,7 @@ public class Ngua : MonoBehaviour
         {
             if (cooldownTimer > attackCooldown)
             {
+                FindObjectOfType<AudioManager>().playSound(attack);
                 cooldownTimer = 0;
                 anima.SetTrigger("attack");
             }

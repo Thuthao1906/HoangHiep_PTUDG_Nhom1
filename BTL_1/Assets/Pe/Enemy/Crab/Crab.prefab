@@ -202,6 +202,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  attack: {fileID: 8300000, guid: e7b87edf7677cc5418b82420b4d497e2, type: 3}
 --- !u!114 &-1094423161532167943
 MonoBehaviour:
   m_ObjectHideFlags: 0
